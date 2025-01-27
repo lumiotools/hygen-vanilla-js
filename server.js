@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey:"",
 });
 
 const systemSetup =

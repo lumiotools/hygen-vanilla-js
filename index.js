@@ -2,7 +2,7 @@
 
 
 const heygen_API = {
-  apiKey: "",
+  apiKey: '',
   serverUrl: 'https://api.heygen.com',
 };
 
