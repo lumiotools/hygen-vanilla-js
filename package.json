@@ -1,13 +1,16 @@
 {
   "name": "streamingavatar",
   "version": "1.0.0",
+  "type": "module",
   "description": "## Pre-Requisites",
-  "main": "index.js",
+  "main": "nodemon index.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "nodemon": "^3.1.9",
     "openai": "^4.28.0"
   },
   "devDependencies": {

@@ -1,7 +1,8 @@
 'use strict';
 
+
 const heygen_API = {
-  apiKey: 'Y2ViZTA3YTc1NmNhNDc5ZWFkNjZkZDNjMDUzZjMzMTYtMTczNzg4MzI0OQ==',
+  apiKey: "",
   serverUrl: 'https://api.heygen.com',
 };
 
@@ -32,8 +33,8 @@ function onMessage(event) {
 async function createNewSession() {
   updateStatus(statusElement, 'Creating new session... please wait');
 
-  const avatar = avatarID.value;
-  const voice = voiceID.value;
+  const avatar = 'Santa_Fireplace_Front_public';
+  const voice = '2f72ee82b83d4b00af16c4771d611752';
 
   // call the new interface to get the server's offer SDP and ICE server to create a new RTCPeerConnection
   sessionInfo = await newSession('low', avatar, voice);
@@ -184,7 +185,6 @@ async function closeConnectionHandler() {
 
 document.querySelector('#newBtn').addEventListener('click', createNewSession);
 document.querySelector('#startBtn').addEventListener('click', startAndDisplaySession);
-document.querySelector('#repeatBtn').addEventListener('click', repeatHandler);
 document.querySelector('#closeBtn').addEventListener('click', closeConnectionHandler);
 document.querySelector('#talkBtn').addEventListener('click', talkHandler);
 
